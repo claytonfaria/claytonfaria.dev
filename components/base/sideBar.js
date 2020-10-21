@@ -1,6 +1,8 @@
 import { Box } from '@chakra-ui/core';
 
-export default function SideBar({ children }) {
+import { DarkModeToggle, Navigation, Profile, SectionDivider } from '.';
+
+export default function SideBar() {
   return (
     <Box
       height="100vh"
@@ -14,7 +16,11 @@ export default function SideBar({ children }) {
       paddingX="1rem"
       paddingBottom="1.5rem"
     >
-      {children}
+      <Profile />
+      <SectionDivider />
+      <Navigation />
+      <SectionDivider />
+      <DarkModeToggle />
     </Box>
   );
 }
