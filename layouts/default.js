@@ -1,10 +1,13 @@
-import { Flex, Heading, Link, Divider, Container } from '@chakra-ui/core';
+import { Flex } from '@chakra-ui/core';
 
-import DarkModeToggle from '../components/base/darkModeToggle';
-import Navigation from '../components/base/navigation';
-import Profile from '../components/base/profile';
-import SectionDivider from '../components/base/sectionDivider';
-import SideBar from '../components/base/sideBar';
+import {
+  DarkModeToggle,
+  Navigation,
+  Profile,
+  SectionDivider,
+  SideBar,
+} from '../components/base';
+import MainContainer from '../components/base/mainContainer';
 
 export default function Layout({ children }) {
   return (
@@ -16,10 +19,7 @@ export default function Layout({ children }) {
         <SectionDivider />
         <DarkModeToggle />
       </SideBar>
-      <Flex direction="column" height="100vh">
-        <Container flex="1">{children}</Container>
-        <Flex>I am the footer</Flex>
-      </Flex>
+      <MainContainer>{children}</MainContainer>
     </Flex>
   );
 }

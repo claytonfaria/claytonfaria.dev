@@ -11,7 +11,7 @@ export default function Navigation() {
       as={List}
       listStyleType="none"
       fontWeight="600"
-      alignItems="flex-start"
+      alignSelf="flex-start"
       marginX="1.5rem"
       paddingX="1rem"
     >

@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 
 import { ChakraProvider } from '@chakra-ui/core';
+
 import Layout from '../layouts/default';
 
 function MyApp({ Component, pageProps }) {
