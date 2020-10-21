@@ -1,21 +1,20 @@
-import { Flex } from '@chakra-ui/core';
+import { Box } from '@chakra-ui/core';
 
 export default function SideBar({ children }) {
   return (
-    <Flex
+    <Box
       height="100vh"
+      marginX="auto"
+      position="fixed"
       width="280px"
       minWidth="280px"
       background="#3b57eb"
       color="#fff"
       overflowY="auto"
-      justifyContent="flex-start"
-      alignItems="center"
-      flexDirection="column"
       paddingX="1rem"
       paddingBottom="1.5rem"
     >
       {children}
-    </Flex>
+    </Box>
   );
 }

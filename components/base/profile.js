@@ -13,7 +13,12 @@ import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
 export default function Profile() {
   return (
     <>
-      <Heading fontSize="1.5rem" fontWeight="bold" paddingY="1.5rem">
+      <Heading
+        fontSize="1.5rem"
+        fontWeight="bold"
+        paddingY="1.5rem"
+        textAlign="center"
+      >
         <Link>Clayton Faria</Link>
       </Heading>
       <Flex

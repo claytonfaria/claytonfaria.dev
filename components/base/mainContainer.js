@@ -8,6 +8,7 @@ export default function MainContainer({ children }) {
       direction="column"
       height="100vh"
       width="100%"
+      marginLeft="280px"
       justifyContent="center"
       alignItems="center"
     >
