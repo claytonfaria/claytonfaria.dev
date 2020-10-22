@@ -1,4 +1,4 @@
-import { Flex, Container } from '@chakra-ui/core';
+import { Flex, Box } from '@chakra-ui/core';
 
 import { Footer } from '.';
 
@@ -9,10 +9,12 @@ export default function MainContainer({ children }) {
       height="100vh"
       width="100%"
       marginLeft="280px"
-      justifyContent="center"
-      alignItems="center"
+      // justifyContent="center"
+      // alignItems="center"
     >
-      <Container flex="1">{children}</Container>
+      <Box paddingX="0" marginX="0" flex="1">
+        {children}
+      </Box>
       <Footer />
     </Flex>
   );
