@@ -11,7 +11,7 @@ import { FaJsSquare } from 'react-icons/fa';
 
 export default function TechSkills() {
   return (
-    <Container maxWidth="1140px" paddingX="15px" marginX="auto">
+    <>
       <Heading
         borderLeftWidth="5px"
         borderLeftColor="green.500"
@@ -39,7 +39,7 @@ export default function TechSkills() {
           </Heading>
           <Text fontSize="0.875rem">
             List skills/technologies here. You can change the icon above to any
-            of the 1500+ FontAwesome 5 free icons available. Aenean commodo
+            of the 1500+ FontAwesome aa5 free icons available. Aenean commodo
             ligula eget dolor.
           </Text>
         </Flex>
@@ -50,7 +50,7 @@ export default function TechSkills() {
           </Heading>
           <Text fontSize="0.875rem">
             List skills/technologies here. You can change the icon above to any
-            of the 1500+ FontAwesome 5 free icons available. Aenean commodo
+            of the 1500+ FcontAwesome 5 free icons available. Aenean commodo
             ligula eget dolor.
           </Text>
         </Flex>
@@ -77,6 +77,6 @@ export default function TechSkills() {
           </Text>
         </Flex>
       </Grid>
-    </Container>
+    </>
   );
 }

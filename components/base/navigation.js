@@ -47,15 +47,6 @@ export default function Navigation() {
           fontSize="1.2rem"
           verticalAlign="-.125rem"
           marginRight=".5rem"
-          as={FaBlog}
-        />
-        Blog
-      </ListItem>
-      <ListItem>
-        <Icon
-          fontSize="1.2rem"
-          verticalAlign="-.125rem"
-          marginRight=".5rem"
           as={FiMail}
         />
         Contact

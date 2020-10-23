@@ -43,7 +43,7 @@ export default function AboutHeader() {
         <Image
           src="/profile-big.webp"
           marginLeft={['0', '0', '0', '3rem']}
-          Width="400px"
+          width="400px"
           maxHeight="300px"
           objectFit="cover"
         />
