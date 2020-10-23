@@ -1,10 +1,22 @@
-import { List, ListItem, Stack, Icon } from '@chakra-ui/core';
+import {
+  List,
+  ListItem,
+  Stack,
+  Icon,
+  Link,
+  useColorMode,
+} from '@chakra-ui/core';
+import NextLink from 'next/link';
 import { BsPersonFill } from 'react-icons/bs';
-import { FaLaptopCode, FaBlog } from 'react-icons/fa';
+import { FaLaptopCode } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
 import { RiPagesLine } from 'react-icons/ri';
 
+import { useRouter } from 'next/router';
+
 export default function Navigation() {
+  const { colorMode } = useColorMode();
+  const router = useRouter();
   return (
     <Stack
       spacing={4}
@@ -14,42 +26,91 @@ export default function Navigation() {
       alignSelf="flex-start"
       marginX="1.5rem"
       paddingX="1rem"
+      color="rgba(255,255,255,0.8)"
     >
       <ListItem>
-        <Icon
-          fontSize="1.2rem"
-          verticalAlign="-.125rem"
-          marginRight=".5rem"
-          as={BsPersonFill}
-        />
-        About Me
+        <NextLink href="/">
+          <Link
+            color={router.pathname === '/' && '#4B90FF'}
+            fontWeight={router.pathname === '/' && 'bolder'}
+            _hover={{
+              textDecoration: 'none',
+              color: 'white',
+              fontWeight: 'bolder',
+            }}
+          >
+            <Icon
+              fontSize="1.2rem"
+              verticalAlign="-.125rem"
+              marginRight=".5rem"
+              as={BsPersonFill}
+            />
+            About Me
+          </Link>
+        </NextLink>
       </ListItem>
       <ListItem>
-        <Icon
-          fontSize="1.2rem"
-          verticalAlign="-.125rem"
-          marginRight=".5rem"
-          as={FaLaptopCode}
-        />
-        Portfolio
+        <NextLink href="/portfolio">
+          <Link
+            color={router.pathname === '/portfolio' && 'white'}
+            fontWeight={router.pathname === '/portfolio' && 'bolder'}
+            _hover={{
+              textDecoration: 'none',
+              color: 'white',
+              fontWeight: 'bolder',
+            }}
+          >
+            <Icon
+              fontSize="1.2rem"
+              verticalAlign="-.125rem"
+              marginRight=".5rem"
+              as={FaLaptopCode}
+            />
+            Portfolio
+          </Link>
+        </NextLink>
       </ListItem>
       <ListItem>
-        <Icon
-          fontSize="1.2rem"
-          verticalAlign="-.125rem"
-          marginRight=".5rem"
-          as={RiPagesLine}
-        />
-        Resume
+        <NextLink href="/resume">
+          <Link
+            color={router.pathname === '/resume' && 'white'}
+            fontWeight={router.pathname === '/resume' && 'bolder'}
+            _hover={{
+              textDecoration: 'none',
+              color: 'white',
+              fontWeight: 'bolder',
+            }}
+          >
+            <Icon
+              fontSize="1.2rem"
+              verticalAlign="-.125rem"
+              marginRight=".5rem"
+              as={RiPagesLine}
+            />
+            Resume
+          </Link>
+        </NextLink>
       </ListItem>
       <ListItem>
-        <Icon
-          fontSize="1.2rem"
-          verticalAlign="-.125rem"
-          marginRight=".5rem"
-          as={FiMail}
-        />
-        Contact
+        <NextLink href="/contact">
+          <Link
+            color={router.pathname === '/contact' && 'white'}
+            fontWeight={router.pathname === '/contact' && 'bolder'}
+            _hover={{
+              textDecoration: 'none',
+              color: 'white',
+              fontWeight: 'bolder',
+            }}
+          >
+            <Icon
+              fontSize="1.2rem"
+              verticalAlign="-.125rem"
+              marginRight=".5rem"
+              as={FiMail}
+            />
+            Contact
+          </Link>
+        </NextLink>
       </ListItem>
     </Stack>
   );

@@ -1,15 +1,113 @@
-import { Heading } from '@chakra-ui/core';
+import {
+  Box,
+  Button,
+  ButtonGroup,
+  Flex,
+  Heading,
+  HStack,
+  Image,
+  SimpleGrid,
+  Tag,
+  Text,
+} from '@chakra-ui/core';
 
 export default function Featured() {
   return (
-    <Heading
-      borderLeftWidth="5px"
-      borderLeftColor="green.500"
-      fontSize="2rem"
-      paddingLeft="1.5rem"
-      marginBottom="1rem"
-    >
-      Featured Projects
-    </Heading>
+    <>
+      <Heading
+        borderLeftWidth="5px"
+        borderLeftColor="highlightColor"
+        fontSize="2rem"
+        paddingLeft="1.5rem"
+        marginBottom="3rem"
+      >
+        Featured Projects
+      </Heading>
+      <Flex
+        background="#F8FAFC"
+        padding="1rem"
+        borderRadius=".25rem"
+        direction={{ base: 'column', xl: 'row' }}
+        alignItems="center"
+      >
+        <Box flex="1">
+          <Image
+            width="100%"
+            height="auto"
+            src="/marketnews2.png"
+            border="1px"
+          />
+        </Box>
+        <Flex direction="column" flex="2" padding="1rem">
+          <Heading size="lg" marginBottom="1rem">
+            Market News
+          </Heading>
+          <Text marginBottom="1rem">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique
+            iure saepe, magni non, dolores cupiditate aperiam, officia eligendi
+            eveniet ipsum perspiciatis vel distinctio quibusdam! Placeat
+          </Text>
+          <Flex marginBottom="1rem" flexWrap="wrap">
+            <Text
+              letterSpacing=".05rem"
+              textTransform="uppercase"
+              px=".5rem"
+              py=".25rem"
+              marginBottom=".5rem"
+              marginRight=".5rem"
+              borderWidth="1px"
+              fontSize=".66rem"
+              borderRadius="full"
+              fontWeight="500"
+              whiteSpace="nowrap"
+              textOverflow="ellipsis"
+            >
+              JavaScript
+            </Text>
+            <Text
+              letterSpacing=".05rem"
+              textTransform="uppercase"
+              px=".5rem"
+              py=".25rem"
+              marginBottom=".5rem"
+              marginRight=".5rem"
+              borderWidth="1px"
+              fontSize=".66rem"
+              borderRadius="full"
+              fontWeight="500"
+              whiteSpace="nowrap"
+              textOverflow="ellipsis"
+            >
+              JavaScript
+            </Text>
+            <Text
+              marginLeft="0"
+              letterSpacing=".05rem"
+              textTransform="uppercase"
+              px=".5rem"
+              py=".25rem"
+              marginBottom=".5rem"
+              marginRight=".5rem"
+              borderWidth="1px"
+              fontSize=".66rem"
+              borderRadius="full"
+              fontWeight="500"
+              whiteSpace="nowrap"
+              textOverflow="ellipsis"
+            >
+              JavaScript
+            </Text>
+          </Flex>
+          <ButtonGroup>
+            <Button background="#4a73ab" color="white">
+              Live
+            </Button>
+            <Button background="#4a73ab" color="white">
+              GitHub
+            </Button>
+          </ButtonGroup>
+        </Flex>
+      </Flex>
+    </>
   );
 }

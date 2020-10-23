@@ -19,7 +19,9 @@ export default function Profile() {
         paddingY="1.5rem"
         textAlign="center"
       >
-        <Link>Clayton Faria</Link>
+        <Link _hover={{ textDecoration: 'none', color: 'white' }}>
+          Clayton Faria
+        </Link>
       </Heading>
       <Flex
         direction="column"
@@ -37,8 +39,8 @@ export default function Profile() {
           />
         </Box>
         <Text marginBottom="1rem">
-          Hi, I'm Clayton Faria and I'm web developer. Welcome to my personal
-          website
+          Hi, my name is Clayton Faria and I'm web developer. Welcome to my
+          personal website
         </Text>
         {/* Social icons */}
         <HStack justifyContent="center">
