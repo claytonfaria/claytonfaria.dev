@@ -1,12 +1,4 @@
-import {
-  Grid,
-  Container,
-  Heading,
-  Text,
-  Box,
-  Flex,
-  Icon,
-} from '@chakra-ui/core';
+import { Grid, Heading, Text, Flex, Icon } from '@chakra-ui/core';
 import { FaJsSquare } from 'react-icons/fa';
 
 export default function TechSkills() {

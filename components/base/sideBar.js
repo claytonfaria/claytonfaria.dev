@@ -1,6 +1,4 @@
-import { Box } from '@chakra-ui/core';
-
-import { useColorModeValue } from '@chakra-ui/core';
+import { Box, useColorModeValue } from '@chakra-ui/core';
 
 import { DarkModeToggle, Navigation, Profile, SectionDivider } from '.';
 

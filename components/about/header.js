@@ -19,7 +19,7 @@ export default function AboutHeader() {
         direction={['column', 'column', 'column', 'row']}
       >
         <Flex direction="column" flex="1">
-          <Heading as="h2" fontSize="5xl" marginBottom=".25rem">
+          <Heading as="h2" fontSize="4xl" marginBottom=".25rem">
             Clayton Faria
           </Heading>
           <Text fontSize="1.5rem" fontWeight="300" marginBottom="1rem">

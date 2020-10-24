@@ -7,12 +7,11 @@ import {
   useColorMode,
 } from '@chakra-ui/core';
 import NextLink from 'next/link';
+import { useRouter } from 'next/router';
 import { BsPersonFill } from 'react-icons/bs';
 import { FaLaptopCode } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
 import { RiPagesLine } from 'react-icons/ri';
-
-import { useRouter } from 'next/router';
 
 export default function Navigation() {
   const { colorMode } = useColorMode();
@@ -34,9 +33,9 @@ export default function Navigation() {
             color={router.pathname === '/' && '#4B90FF'}
             fontWeight={router.pathname === '/' && 'bolder'}
             _hover={{
-              textDecoration: 'none',
               color: 'white',
               fontWeight: 'bolder',
+              textDecoration: 'none',
             }}
           >
             <Icon
@@ -55,9 +54,9 @@ export default function Navigation() {
             color={router.pathname === '/portfolio' && 'white'}
             fontWeight={router.pathname === '/portfolio' && 'bolder'}
             _hover={{
-              textDecoration: 'none',
               color: 'white',
               fontWeight: 'bolder',
+              textDecoration: 'none',
             }}
           >
             <Icon
@@ -76,9 +75,9 @@ export default function Navigation() {
             color={router.pathname === '/resume' && 'white'}
             fontWeight={router.pathname === '/resume' && 'bolder'}
             _hover={{
-              textDecoration: 'none',
               color: 'white',
               fontWeight: 'bolder',
+              textDecoration: 'none',
             }}
           >
             <Icon
@@ -97,9 +96,9 @@ export default function Navigation() {
             color={router.pathname === '/contact' && 'white'}
             fontWeight={router.pathname === '/contact' && 'bolder'}
             _hover={{
-              textDecoration: 'none',
               color: 'white',
               fontWeight: 'bolder',
+              textDecoration: 'none',
             }}
           >
             <Icon
