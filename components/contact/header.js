@@ -1,7 +1,7 @@
-import { Text, Flex, Heading, Button, Icon, HStack } from '@chakra-ui/core';
+import { Text, Flex, Heading, Icon, HStack } from '@chakra-ui/core';
+import { FaTwitter } from 'react-icons/fa';
 
 import HeaderWrapper from '../base/headerWrapper';
-import { FaTwitter } from 'react-icons/fa';
 
 export default function ContactHeader() {
   return (

@@ -1,6 +1,6 @@
-import ResumeHeader from '../components/resume/header';
-
 import { Flex } from '@chakra-ui/core';
+
+import ResumeHeader from '../components/resume/header';
 
 export default function Resume() {
   return (

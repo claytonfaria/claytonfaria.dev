@@ -1,4 +1,4 @@
-import { Text, Flex, Heading, Button, Icon, HStack } from '@chakra-ui/core';
+import { Flex, Heading, Button } from '@chakra-ui/core';
 
 import HeaderWrapper from '../base/headerWrapper';
 

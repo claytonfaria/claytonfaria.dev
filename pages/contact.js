@@ -1,7 +1,7 @@
-import { Container, Box, Heading } from '@chakra-ui/core';
+import { Heading, Flex } from '@chakra-ui/core';
+
 import ContactForm from '../components/contact/contactForm';
 import ContactHeader from '../components/contact/header';
-import { Text, Flex, Divider } from '@chakra-ui/core';
 
 export default function Contact() {
   return (
