@@ -1,5 +1,3 @@
-import '../styles/globals.css';
-
 import { extendTheme, ChakraProvider } from '@chakra-ui/core';
 
 import Layout from '../layouts/default';
@@ -18,10 +16,10 @@ const theme = extendTheme({
   },
 });
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router }) {
   return (
     <ChakraProvider theme={theme}>
-      <Layout>
+      <Layout router={router}>
         <Component {...pageProps} />
       </Layout>
     </ChakraProvider>
