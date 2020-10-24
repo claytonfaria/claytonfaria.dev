@@ -1,8 +1,8 @@
-import { Text, Container, Flex, Box, Divider } from '@chakra-ui/core';
+import { Container, Box, Divider } from '@chakra-ui/core';
+
 import Featured from '../components/about/featured';
 import AboutHeader from '../components/about/header';
 import TechSkills from '../components/about/techSkills';
-import { SectionDivider } from '../components/base';
 
 export default function Home() {
   return (

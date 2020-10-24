@@ -13,7 +13,7 @@ export default function Card() {
   const { colorMode } = useColorMode();
   return (
     <Flex
-      background={colorMode === 'dark' ? '#1e2a3a' : '#f8fafc'}
+      background={colorMode === 'dark' ? 'primaryDark' : 'lightBackground'}
       padding="1rem"
       borderRadius=".25rem"
       direction={{ base: 'column', xl: 'row' }}
@@ -50,45 +50,12 @@ export default function Card() {
           >
             JavaScript
           </Text>
-          <Text
-            letterSpacing=".05rem"
-            textTransform="uppercase"
-            px=".5rem"
-            py=".25rem"
-            marginBottom=".5rem"
-            marginRight=".5rem"
-            borderWidth="1px"
-            fontSize=".66rem"
-            borderRadius="full"
-            fontWeight="500"
-            whiteSpace="nowrap"
-            textOverflow="ellipsis"
-          >
-            JavaScript
-          </Text>
-          <Text
-            marginLeft="0"
-            letterSpacing=".05rem"
-            textTransform="uppercase"
-            px=".5rem"
-            py=".25rem"
-            marginBottom=".5rem"
-            marginRight=".5rem"
-            borderWidth="1px"
-            fontSize=".66rem"
-            borderRadius="full"
-            fontWeight="500"
-            whiteSpace="nowrap"
-            textOverflow="ellipsis"
-          >
-            JavaScript
-          </Text>
         </Flex>
         <ButtonGroup>
-          <Button background="#4a73ab" color="white">
+          <Button background="primaryBlue" width="120px" color="white">
             Live
           </Button>
-          <Button background="#4a73ab" color="white">
+          <Button background="teal.600" width="120px" color="white">
             GitHub
           </Button>
         </ButtonGroup>

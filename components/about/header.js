@@ -32,14 +32,10 @@ export default function AboutHeader() {
             Check out my project portfolio and online resume.
           </Text>
           <ButtonGroup spacing={3} marginBottom="1.4rem">
-            <Button
-              marginBottom="1rem"
-              background="highlightColor"
-              color="white"
-            >
+            <Button marginBottom="1rem" background="primaryBlue" color="white">
               View Portfolio
             </Button>
-            <Button marginBottom="1rem" background="#4a73ab" color="white">
+            <Button marginBottom="1rem" background="teal.600" color="white">
               View Resume
             </Button>
           </ButtonGroup>

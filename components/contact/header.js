@@ -1,6 +1,6 @@
-import { Text, Flex, Heading, Icon, HStack } from '@chakra-ui/core';
-import { FaTwitter } from 'react-icons/fa';
+import { Text, Flex, Heading, HStack, Link } from '@chakra-ui/core';
 
+import { SocialIcons } from '../base';
 import HeaderWrapper from '../base/headerWrapper';
 
 export default function ContactHeader() {
@@ -19,16 +19,23 @@ export default function ContactHeader() {
         </Heading>
         <Text marginBottom="1rem" textAlign="center">
           Interested in hiring me for your project or just want to say hi? You
-          can fill in the contact form below or send me an email to
-          hello@claytonfaria.dev
+          can fill in the contact form below or send me an email{' '}
+          <Link
+            color="primaryBlue"
+            fontWeight="bold"
+            href="mailto: hello@claytonfaria.dev"
+            _hover={{ textDecoration: 'none' }}
+          >
+            hello@claytonfaria.dev
+          </Link>
         </Text>
         <Text marginBottom="1rem" textAlign="center">
           Want to get connected? Follow me on the social channles below.
         </Text>
-        <HStack>
-          <Icon as={FaTwitter} />
-          <Icon as={FaTwitter} />
-          <Icon as={FaTwitter} />
+        <HStack justifyContent="center">
+          <SocialIcons type="github" />
+          <SocialIcons type="twitter" />
+          <SocialIcons type="linkedin" />
         </HStack>
       </Flex>
     </HeaderWrapper>

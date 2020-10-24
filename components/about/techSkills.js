@@ -6,7 +6,7 @@ export default function TechSkills() {
     <>
       <Heading
         borderLeftWidth="5px"
-        borderLeftColor="highlightColor"
+        borderLeftColor="primaryBlue"
         fontSize="2rem"
         paddingLeft="1.5rem"
         marginBottom="1rem"

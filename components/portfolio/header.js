@@ -22,7 +22,9 @@ export default function PortfolioHeader() {
           taking on freelance work at the moment. Want some help building your
           software?{' '}
         </Text>
-        <Button colorScheme="blue">Contact Me</Button>
+        <Button background="primaryBlue" color="white">
+          Contact Me
+        </Button>
       </Flex>
     </HeaderWrapper>
   );

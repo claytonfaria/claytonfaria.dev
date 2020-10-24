@@ -112,7 +112,13 @@ export default function ContactForm() {
           />
         </FormControl>
         <FormControl marginBottom="1rem">
-          <Button width="100%" type="submit" isDisabled={status.submitting}>
+          <Button
+            width="100%"
+            type="submit"
+            isDisabled={status.submitting}
+            color="white"
+            background="primaryBlue"
+          >
             {!status.submitting
               ? !status.submitted
                 ? 'Submit'

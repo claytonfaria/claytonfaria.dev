@@ -1,14 +1,6 @@
-import {
-  Box,
-  Flex,
-  HStack,
-  Image,
-  Link,
-  Text,
-  IconButton,
-  Heading,
-} from '@chakra-ui/core';
-import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { Box, Flex, HStack, Image, Text, Heading } from '@chakra-ui/core';
+
+import SocialIcons from './socialIcons';
 
 export default function Profile() {
   return (
@@ -19,9 +11,9 @@ export default function Profile() {
         paddingY="1.5rem"
         textAlign="center"
       >
-        <Link _hover={{ textDecoration: 'none', color: 'white' }}>
+        {/* <Link _hover={{ textDecoration: 'none', color: 'white' }}>
           Clayton Faria
-        </Link>
+        </Link> */}
       </Heading>
       <Flex
         direction="column"
@@ -44,30 +36,9 @@ export default function Profile() {
         </Text>
         {/* Social icons */}
         <HStack justifyContent="center">
-          <IconButton
-            fontSize="1.5rem"
-            as={Link}
-            icon={<FaGithub />}
-            variant="ghost"
-            _hover={{ outline: 'none' }}
-            _active={{ outline: 'none' }}
-          />
-          <IconButton
-            fontSize="1.5rem"
-            as={Link}
-            icon={<FaTwitter />}
-            variant="ghost"
-            _hover={{ outline: 'none' }}
-            _active={{ outline: 'none' }}
-          />
-          <IconButton
-            fontSize="1.5rem"
-            as={Link}
-            icon={<FaLinkedin />}
-            variant="ghost"
-            _hover={{ outline: 'none' }}
-            _active={{ outline: 'none' }}
-          />
+          <SocialIcons type="github" />
+          <SocialIcons type="twitter" />
+          <SocialIcons type="linkedin" />
         </HStack>
         {/* //Social icons */}
       </Flex>

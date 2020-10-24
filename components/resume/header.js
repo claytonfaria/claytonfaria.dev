@@ -16,7 +16,9 @@ export default function ResumeHeader() {
         <Heading fontSize="2rem" marginBottom="1rem">
           Online Resume
         </Heading>
-        <Button colorScheme="blue">Download PDF Version</Button>
+        <Button color="white" background="primaryBlue">
+          Download PDF Version
+        </Button>
       </Flex>
     </HeaderWrapper>
   );

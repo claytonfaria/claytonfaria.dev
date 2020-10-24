@@ -1,9 +1,9 @@
-import { Box, useColorModeValue } from '@chakra-ui/core';
+import { Box, useColorModeValue, Flex, Text } from '@chakra-ui/core';
 
 import { DarkModeToggle, Navigation, Profile, SectionDivider } from '.';
 
 export default function SideBar() {
-  const sideBarColor = useColorModeValue('highlightColor', '#1e2a3a');
+  const sideBarColor = useColorModeValue('primaryBlue', 'primaryDark');
 
   return (
     <Box
@@ -22,7 +22,12 @@ export default function SideBar() {
       <SectionDivider />
       <Navigation />
       <SectionDivider />
-      <DarkModeToggle />
+      <Flex direction="column" justifyContent="center" alignItems="center">
+        <Text marginBottom=".5rem" fontWeight="bold">
+          Color Mode
+        </Text>
+        <DarkModeToggle />
+      </Flex>
     </Box>
   );
 }

@@ -7,7 +7,7 @@ export default function Featured() {
     <>
       <Heading
         borderLeftWidth="5px"
-        borderLeftColor="highlightColor"
+        borderLeftColor="primaryBlue"
         fontSize="2rem"
         paddingLeft="1.5rem"
         marginBottom="3rem"
