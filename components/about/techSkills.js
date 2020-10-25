@@ -1,7 +1,19 @@
-import { Grid, Heading, Text, Flex, Icon } from '@chakra-ui/core';
-import { FaJsSquare } from 'react-icons/fa';
+import { Heading, Text, Flex, Image, useColorMode, Box } from '@chakra-ui/core';
 
 export default function TechSkills() {
+  const { colorMode } = useColorMode();
+
+  const techSkills = [
+    'javascript',
+    'css',
+    'html',
+    'react',
+    'nextjs',
+    'node',
+    'express',
+    'python',
+    'pandas',
+  ];
   return (
     <>
       <Heading
@@ -13,62 +25,35 @@ export default function TechSkills() {
       >
         What I do
       </Heading>
-      <Text marginBottom="3rem">
+      <Text marginBottom="1rem">
         I have more than 10 years' experience building software for clients all
         over the world. Below is a quick overview of my main technical skill
         sets and technologies I use. Want to find out more about my experience?
         Check out my online resume and project portfolio.
       </Text>
 
-      <Grid
-        templateColumns={{ base: 'repeat(2, 1fr)', lg: 'repeat(4, 1fr)' }}
-        gap={6}
-      >
-        <Flex direction="column">
-          <Icon as={FaJsSquare} fontSize="2rem" marginBottom="0.3rem" />
-          <Heading fontSize="1rem" marginBottom=".5rem">
-            Vanilla JavaScript
-          </Heading>
-          <Text fontSize="0.875rem">
-            List skills/technologies here. You can change the icon above to any
-            of the 1500+ FontAwesome aa5 free icons available. Aenean commodo
-            ligula eget dolor.
-          </Text>
-        </Flex>
-        <Flex direction="column">
-          <Icon as={FaJsSquare} fontSize="2rem" marginBottom="0.3rem" />
-          <Heading fontSize="1rem" marginBottom=".5rem">
-            Vanilla JavaScript
-          </Heading>
-          <Text fontSize="0.875rem">
-            List skills/technologies here. You can change the icon above to any
-            of the 1500+ FcontAwesome 5 free icons available. Aenean commodo
-            ligula eget dolor.
-          </Text>
-        </Flex>
-        <Flex direction="column">
-          <Icon as={FaJsSquare} fontSize="2rem" marginBottom="0.3rem" />
-          <Heading fontSize="1rem" marginBottom=".5rem">
-            Vanilla JavaScript
-          </Heading>
-          <Text fontSize="0.875rem">
-            List skills/technologies here. You can change the icon above to any
-            of the 1500+ FontAwesome 5 free icons available. Aenean commodo
-            ligula eget dolor.
-          </Text>
-        </Flex>
-        <Flex direction="column">
-          <Icon as={FaJsSquare} fontSize="2rem" marginBottom="0.3rem" />
-          <Heading fontSize="1rem" marginBottom=".5rem">
-            Vanilla JavaScript
-          </Heading>
-          <Text fontSize="0.875rem">
-            List skills/technologies here. You can change the icon above to any
-            of the 1500+ FontAwesome 5 free icons available. Aenean commodo
-            ligula eget dolor.
-          </Text>
-        </Flex>
-      </Grid>
+      <Flex justifyContent="center" flexWrap="wrap">
+        {techSkills.map((skill, index) => (
+          <Skill
+            colorMode={colorMode}
+            src={`/images/skills/${skill.toLowerCase()}.svg`}
+            alt={skill}
+            key={index}
+          />
+        ))}
+      </Flex>
     </>
+  );
+}
+
+function Skill({ colorMode, src, alt }) {
+  return (
+    <Box
+      margin="1rem"
+      borderRadius=".5rem"
+      background={colorMode === 'dark' && 'white'}
+    >
+      <Image src={src} alt={alt} maxWidth="8rem" height="4rem" margin="1rem" />
+    </Box>
   );
 }

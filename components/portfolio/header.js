@@ -1,4 +1,5 @@
 import { Text, Flex, Heading, Button } from '@chakra-ui/core';
+import BaseButton from '../base/button';
 
 import HeaderWrapper from '../base/headerWrapper';
 
@@ -22,9 +23,7 @@ export default function PortfolioHeader() {
           taking on freelance work at the moment. Want some help building your
           software?{' '}
         </Text>
-        <Button background="primaryBlue" color="white">
-          Contact Me
-        </Button>
+        <BaseButton background="primaryBlue">Contact Me</BaseButton>
       </Flex>
     </HeaderWrapper>
   );

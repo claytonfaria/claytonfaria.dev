@@ -1,5 +1,8 @@
 import { Flex, Box } from '@chakra-ui/core';
 import { motion } from 'framer-motion';
+import { cloneElement } from 'react';
+
+import { projects } from '../../data/projects.json';
 
 import { Footer } from '.';
 
@@ -29,7 +32,7 @@ export default function MainContainer({ children, router }) {
       variants={pageTransitionAnimation}
     >
       <Box paddingX="0" marginX="0" flex="1">
-        {children}
+        {cloneElement(children, { projects })}
       </Box>
       <Footer />
     </MotionFlex>

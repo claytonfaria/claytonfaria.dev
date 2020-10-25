@@ -118,6 +118,8 @@ export default function ContactForm() {
             isDisabled={status.submitting}
             color="white"
             background="primaryBlue"
+            _hover={{ opacity: '0.9' }}
+            _active={{ opacity: '0.9' }}
           >
             {!status.submitting
               ? !status.submitted

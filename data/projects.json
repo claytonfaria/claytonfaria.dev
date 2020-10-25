@@ -1,0 +1,26 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "MarketNews",
+      "description": "A responsive website that provides news, updated quotation and advanced charting tools",
+      "tags": ["Next.js", "React", "Bootstrap"],
+      "imgUrl": "/images/projects/marketnews.webp",
+      "fallbackImgUrl": "/images/projects/marketnews.png",
+      "liveUrl": "https://marketnews-next.vercel.app/",
+      "repoUrl": "https://github.com/claytonfaria/market-news-nextJS",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "My Personal Website",
+      "description": "My personal/portfolio website, this one you are browsing, created using Next.js and Chakra UI",
+      "tags": ["Next.js", "React", "Chakra-ui"],
+      "imgUrl": "/images/projects/portfolio.webp",
+      "fallbackImgUrl": "/images/projects/portfolio.png",
+      "liveUrl": "",
+      "repoUrl": "https://github.com/claytonfaria/claytonfaria.dev",
+      "featured": true
+    }
+  ]
+}

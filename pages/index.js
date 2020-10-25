@@ -4,7 +4,7 @@ import Featured from '../components/about/featured';
 import AboutHeader from '../components/about/header';
 import TechSkills from '../components/about/techSkills';
 
-export default function Home() {
+export default function Home({ projects }) {
   return (
     <>
       <AboutHeader />
@@ -12,7 +12,7 @@ export default function Home() {
         <Container maxWidth="1140px" paddingX="15px" marginX="auto">
           <TechSkills />
           <Divider orientation="horizontal" marginY="4rem" />
-          <Featured />
+          <Featured projects={projects} />
         </Container>
       </Box>
     </>

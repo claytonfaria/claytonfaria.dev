@@ -6,6 +6,7 @@ import {
   ButtonGroup,
   Button,
 } from '@chakra-ui/core';
+import BaseButton from '../base/button';
 
 import HeaderWrapper from '../base/headerWrapper';
 
@@ -32,12 +33,8 @@ export default function AboutHeader() {
             Check out my project portfolio and online resume.
           </Text>
           <ButtonGroup spacing={3} marginBottom="1.4rem">
-            <Button marginBottom="1rem" background="primaryBlue" color="white">
-              View Portfolio
-            </Button>
-            <Button marginBottom="1rem" background="teal.600" color="white">
-              View Resume
-            </Button>
+            <BaseButton background="primaryBlue">View Portfolio</BaseButton>
+            <BaseButton background="teal.500">View Resume</BaseButton>
           </ButtonGroup>
         </Flex>
         <Image
