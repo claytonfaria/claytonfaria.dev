@@ -7,7 +7,7 @@ export default function Portfolio({ projects }) {
   return (
     <>
       <PortfolioHeader />
-      <Box padding="3rem">
+      <Box padding={{ base: '1rem', lg: '3rem' }}>
         <Container maxWidth="1140px" paddingX="15px" marginX="auto">
           <Heading
             borderLeftWidth="5px"

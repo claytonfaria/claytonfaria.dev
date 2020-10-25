@@ -23,13 +23,11 @@ export default function TechSkills() {
         paddingLeft="1.5rem"
         marginBottom="1rem"
       >
-        What I do
+        Tech Skills
       </Heading>
       <Text marginBottom="1rem">
-        I have more than 10 years' experience building software for clients all
-        over the world. Below is a quick overview of my main technical skill
-        sets and technologies I use. Want to find out more about my experience?
-        Check out my online resume and project portfolio.
+        Below is a quick overview of my main technical skill sets and
+        technologies I use.
       </Text>
 
       <Flex justifyContent="center" flexWrap="wrap">

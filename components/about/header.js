@@ -1,16 +1,19 @@
 import {
   Text,
   Flex,
-  Image,
   Heading,
   ButtonGroup,
+  useBreakpointValue,
   Button,
+  Link,
 } from '@chakra-ui/core';
-import BaseButton from '../base/button';
+import NextLink from 'next/link';
 
-import HeaderWrapper from '../base/headerWrapper';
+import { DarkModeToggle, HeaderWrapper } from '../base';
 
 export default function AboutHeader() {
+  const deviceType = useBreakpointValue({ base: 'mobile', lg: 'desktop' });
+
   return (
     <HeaderWrapper>
       <Flex
@@ -20,30 +23,53 @@ export default function AboutHeader() {
         direction={['column', 'column', 'column', 'row']}
       >
         <Flex direction="column" flex="1">
-          <Heading as="h2" fontSize="4xl" marginBottom=".25rem">
-            Clayton Faria
-          </Heading>
+          <Flex justifyContent="space-between" alignItems="center">
+            <Heading as="h2" fontSize="4xl" marginBottom=".25rem">
+              Clayton Faria
+            </Heading>
+            {deviceType === 'mobile' && <DarkModeToggle />}
+          </Flex>
           <Text fontSize="1.5rem" fontWeight="300" marginBottom="1rem">
             Web Developer
           </Text>
           <Text marginBottom="1.5rem">
-            I'm a software engineer specialised in frontend and backend
-            development for complex scalable web apps. I write about software
-            development on my blog. Want to know how I may help your project?
+            I am a brazilian 🇧🇷 <strong>web developer</strong> living in awesome
+            Taiwan 🇹🇼, the Heart of Asia. I mostly code with{' '}
+            <strong>JavaScript</strong>
+            (React.js/Next.js & Node.js), but I also have some experience with
+            Python and others.
+          </Text>
+          <Text marginBottom="1.5rem">
             Check out my project portfolio and online resume.
           </Text>
-          <ButtonGroup spacing={3} marginBottom="1.4rem">
-            <BaseButton background="primaryBlue">View Portfolio</BaseButton>
-            <BaseButton background="teal.500">View Resume</BaseButton>
+          <ButtonGroup spacing={3} marginBottom="0" paddingBottom="0">
+            <NextLink href="/portfolio">
+              <Button
+                as={Link}
+                marginBottom="1rem"
+                minWidth="120px"
+                background="primaryBlue"
+                color="white"
+                _hover={{ opacity: '0.9', textDecoration: 'none' }}
+                _active={{ opacity: '0.9', textDecoration: 'none' }}
+              >
+                View Portfolio
+              </Button>
+            </NextLink>
+            <NextLink href="/resume">
+              <Button
+                as={Link}
+                minWidth="120px"
+                background="teal.700"
+                color="white"
+                _hover={{ opacity: '0.9', textDecoration: 'none' }}
+                _active={{ opacity: '0.9', textDecoration: 'none' }}
+              >
+                View Resume
+              </Button>
+            </NextLink>
           </ButtonGroup>
         </Flex>
-        <Image
-          src="/profile-big.webp"
-          marginLeft={['0', '0', '0', '3rem']}
-          width="400px"
-          maxHeight="300px"
-          objectFit="cover"
-        />
       </Flex>
     </HeaderWrapper>
   );

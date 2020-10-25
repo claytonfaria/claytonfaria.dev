@@ -8,10 +8,10 @@ export default function Home({ projects }) {
   return (
     <>
       <AboutHeader />
-      <Box padding="3rem">
+      <Box padding={{ base: '1rem', lg: '3rem' }} paddingTop="3rem">
         <Container maxWidth="1140px" paddingX="15px" marginX="auto">
           <TechSkills />
-          <Divider orientation="horizontal" marginY="4rem" />
+          <Divider orientation="horizontal" marginY="3rem" />
           <Featured projects={projects} />
         </Container>
       </Box>

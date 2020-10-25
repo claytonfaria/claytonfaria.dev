@@ -11,7 +11,7 @@ export default function DarkModeToggle() {
       variant="ghost"
       onClick={toggleColorMode}
       fontSize={['1.4rem', '1.2rem']}
-      color="#f6ad55"
+      color="highlightYellow"
       icon={colorMode === 'light' ? <FaMoon /> : <FaSun />}
       aria-label="Select color mode"
       cursor="pointer"

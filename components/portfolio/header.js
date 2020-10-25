@@ -1,7 +1,7 @@
-import { Text, Flex, Heading, Button } from '@chakra-ui/core';
-import BaseButton from '../base/button';
+import { Text, Flex, Heading, Button, Link } from '@chakra-ui/core';
+import NextLink from 'next/link';
 
-import HeaderWrapper from '../base/headerWrapper';
+import { HeaderWrapper } from '../base';
 
 export default function PortfolioHeader() {
   return (
@@ -23,7 +23,19 @@ export default function PortfolioHeader() {
           taking on freelance work at the moment. Want some help building your
           software?{' '}
         </Text>
-        <BaseButton background="primaryBlue">Contact Me</BaseButton>
+        <NextLink href="/contact">
+          <Button
+            as={Link}
+            marginBottom="1rem"
+            minWidth="120px"
+            background="primaryBlue"
+            color="white"
+            _hover={{ opacity: '0.9', textDecoration: 'none' }}
+            _active={{ opacity: '0.9', textDecoration: 'none' }}
+          >
+            Contact Me
+          </Button>
+        </NextLink>
       </Flex>
     </HeaderWrapper>
   );

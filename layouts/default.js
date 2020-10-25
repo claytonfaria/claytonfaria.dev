@@ -1,13 +1,21 @@
-import { Flex } from '@chakra-ui/core';
+import { Flex, useBreakpointValue } from '@chakra-ui/core';
 
-import MainContainer from '../components/base/mainContainer';
-import SideBar from '../components/base/sideBar';
+import { BottomNavigation, PageMetadata } from '../components/layout';
+import MainContainer from '../components/layout/mainContainer';
+import SideBar from '../components/layout/sideBar';
 
 export default function Layout({ children, router }) {
+  const deviceType = useBreakpointValue({ base: 'mobile', lg: 'desktop' });
   return (
-    <Flex>
-      <SideBar />
-      <MainContainer router={router}>{children}</MainContainer>
-    </Flex>
+    <>
+      <PageMetadata />
+      <Flex>
+        {deviceType === 'desktop' && <SideBar />}
+
+        <MainContainer router={router}>{children}</MainContainer>
+
+        {deviceType === 'mobile' && <BottomNavigation />}
+      </Flex>
+    </>
   );
 }

@@ -3,15 +3,14 @@ import { motion } from 'framer-motion';
 import { cloneElement } from 'react';
 
 import { projects } from '../../data/projects.json';
-
-import { Footer } from '.';
+import { Footer } from '../base';
 
 export default function MainContainer({ children, router }) {
   const pageTransitionAnimation = {
     pageAnimate: {
       opacity: 1,
       transition: {
-        duration: 0.5,
+        duration: 0.3,
       },
     },
     pageInitial: {
@@ -19,22 +18,26 @@ export default function MainContainer({ children, router }) {
     },
   };
 
-  const MotionFlex = motion.custom(Flex);
+  const MotionBox = motion.custom(Box);
   return (
-    <MotionFlex
+    <Flex
       direction="column"
       height="100vh"
       width="100%"
-      marginLeft="280px"
-      key={router.route}
-      initial="pageInitial"
-      animate="pageAnimate"
-      variants={pageTransitionAnimation}
+      marginLeft={{ base: '0', lg: '280px' }}
     >
-      <Box paddingX="0" marginX="0" flex="1">
+      <MotionBox
+        paddingX="0"
+        marginX="0"
+        flex="1"
+        key={router.route}
+        initial="pageInitial"
+        animate="pageAnimate"
+        variants={pageTransitionAnimation}
+      >
         {cloneElement(children, { projects })}
-      </Box>
+      </MotionBox>
       <Footer />
-    </MotionFlex>
+    </Flex>
   );
 }

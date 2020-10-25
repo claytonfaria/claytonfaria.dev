@@ -78,7 +78,7 @@ export default function ContactForm() {
     >
       <form onSubmit={handleOnSubmit}>
         <FormControl isRequired marginBottom="1rem">
-          <FormLabel>Name</FormLabel>
+          <FormLabel htmlFor="name">Name</FormLabel>
           <Input
             id="name"
             type="text"
@@ -89,7 +89,7 @@ export default function ContactForm() {
           />
         </FormControl>
         <FormControl isRequired marginBottom="1rem">
-          <FormLabel>Email address</FormLabel>
+          <FormLabel htmlFor="email">Email address</FormLabel>
           <Input
             id="email"
             type="email"
@@ -101,7 +101,7 @@ export default function ContactForm() {
           />
         </FormControl>
         <FormControl isRequired marginBottom="1rem">
-          <FormLabel>Message</FormLabel>
+          <FormLabel htmlFor="message">Message</FormLabel>
           <Textarea
             id="message"
             name="message"

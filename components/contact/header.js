@@ -1,9 +1,16 @@
-import { Text, Flex, Heading, HStack, Link } from '@chakra-ui/core';
+import {
+  Text,
+  Flex,
+  Heading,
+  HStack,
+  Link,
+  useColorMode,
+} from '@chakra-ui/core';
 
-import { SocialIcons } from '../base';
-import HeaderWrapper from '../base/headerWrapper';
+import { SocialIcons, HeaderWrapper } from '../base';
 
 export default function ContactHeader() {
+  const { colorMode } = useColorMode();
   return (
     <HeaderWrapper>
       <Flex
@@ -21,7 +28,7 @@ export default function ContactHeader() {
           Interested in hiring me for your project or just want to say hi? You
           can fill in the contact form below or send me an email{' '}
           <Link
-            color="primaryBlue"
+            color={colorMode === 'dark' ? 'highlightYellow' : 'primaryBlue'}
             fontWeight="bold"
             href="mailto: hello@claytonfaria.dev"
             _hover={{ textDecoration: 'none' }}
@@ -30,7 +37,7 @@ export default function ContactHeader() {
           </Link>
         </Text>
         <Text marginBottom="1rem" textAlign="center">
-          Want to get connected? Follow me on the social channles below.
+          Want to get connected? Follow me on the social channels below.
         </Text>
         <HStack justifyContent="center">
           <SocialIcons type="github" />

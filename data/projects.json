@@ -18,7 +18,7 @@
       "tags": ["Next.js", "React", "Chakra-ui"],
       "imgUrl": "/images/projects/portfolio.webp",
       "fallbackImgUrl": "/images/projects/portfolio.png",
-      "liveUrl": "",
+      "liveUrl": "/",
       "repoUrl": "https://github.com/claytonfaria/claytonfaria.dev",
       "featured": true
     }

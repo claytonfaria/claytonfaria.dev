@@ -7,7 +7,7 @@ export default function HeaderWrapper({ children }) {
       background={colorMode === 'dark' ? 'gray.800' : 'lightBackground'}
       borderBottom="1px"
       borderBottomColor="rgba(255,255,255,0.1)"
-      padding="3rem"
+      padding={{ base: '1rem', lg: '3rem' }}
       transition="background .2s"
     >
       {children}

@@ -8,10 +8,18 @@ import {
   useColorMode,
 } from '@chakra-ui/core';
 
-import BaseButton from '../base/button';
+import { BaseButton } from '../base';
 
 export default function Card({ data }) {
-  const { title, description, tags, imgUrl, fallbackImgUrl } = data;
+  const {
+    title,
+    description,
+    tags,
+    imgUrl,
+    fallbackImgUrl,
+    liveUrl,
+    repoUrl,
+  } = data;
 
   const { colorMode } = useColorMode();
   return (
@@ -30,6 +38,7 @@ export default function Card({ data }) {
           height="auto"
           src={imgUrl}
           fallbackSrc={fallbackImgUrl}
+          alt="project image"
         />
       </Box>
       <Flex direction="column" flex="2" padding="1rem">
@@ -60,8 +69,10 @@ export default function Card({ data }) {
         </Flex>
 
         <ButtonGroup>
-          <BaseButton>Live</BaseButton>
-          <BaseButton background="teal.500">GitHub</BaseButton>
+          <BaseButton href={liveUrl}>Live</BaseButton>
+          <BaseButton href={repoUrl} background="teal.700">
+            GitHub
+          </BaseButton>
         </ButtonGroup>
       </Flex>
     </Flex>

@@ -21,9 +21,11 @@ export default function SocialIcons({ type }) {
       as={Link}
       icon={icon[type]}
       variant="ghost"
+      aria-label={type}
       _hover={{
         outline: 'none',
         transform: 'translateY(-5px)',
+        color: 'highlightYellow',
       }}
       _active={{ outline: 'none' }}
     />
