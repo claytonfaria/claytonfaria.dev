@@ -18,10 +18,9 @@ export default function PortfolioHeader() {
           Portfolio
         </Heading>
         <Text marginBottom="1rem" textAlign="center">
-          Welcome to my online portfolio. Lorem ipsum dolor sit amet,
-          consectetuer adipiscing elit. Aenean commodo ligula eget dolor. I'm
-          taking on freelance work at the moment. Want some help building your
-          software?{' '}
+          Welcome to my online portfolio. Here your will find some of the
+          projects I created along with their core technologies. Want some help
+          building your software?{' '}
         </Text>
         <NextLink href="/contact">
           <Button

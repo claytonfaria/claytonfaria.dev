@@ -1,7 +1,6 @@
 import { Box, useColorModeValue, Flex, Text } from '@chakra-ui/core';
 
 import { DarkModeToggle, Profile, SectionDivider } from '../base';
-
 import Navigation from './navigation';
 
 export default function SideBar() {
