@@ -19,8 +19,7 @@ export default function Portfolio({ projects }) {
             Projects
           </Heading>
           {projects
-            .filter((project) => project.featured)
-            .sort((a, b) => b.id - a.id)
+            // .sort((a, b) => b.id - a.id)
             .map((project) => (
               <Card data={project} key={project.id} />
             ))}

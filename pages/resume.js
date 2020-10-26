@@ -3,7 +3,7 @@ import { Flex } from '@chakra-ui/core';
 import ResumeHeader from '../components/resume/header';
 
 export default function Resume() {
-  const fileId = '1fx4ETI_Syhlav57HwstM-OZSrjNN1koZ';
+  const fileId = '1UhzSYmJq8gd2uJ5RhWbcRR4jmAUoeKCL';
 
   return (
     <>
