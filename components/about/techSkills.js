@@ -47,17 +47,20 @@ export default function TechSkills() {
 function Skill({ colorMode, src, alt }) {
   return (
     <Box
-      margin="1rem"
+      margin="0.5rem"
       borderRadius=".5rem"
       background={colorMode === 'dark' && 'white'}
     >
       <Image
+        display="block"
         src={src}
         alt={alt}
         maxWidth="8rem"
+        minWidth="4rem"
         height="4rem"
-        margin="1rem"
+        margin="0.5rem"
         htmlHeight="96"
+        // htmlWidth="96"
       />
     </Box>
   );
