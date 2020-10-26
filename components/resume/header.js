@@ -1,9 +1,9 @@
-import { Flex, Heading, Button } from '@chakra-ui/core';
-import BaseButton from '../base/button';
+import { Flex, Heading } from '@chakra-ui/core';
 
+import BaseButton from '../base/button';
 import HeaderWrapper from '../base/headerWrapper';
 
-export default function ResumeHeader() {
+export default function ResumeHeader({ fileId }) {
   return (
     <HeaderWrapper>
       <Flex
@@ -17,7 +17,11 @@ export default function ResumeHeader() {
         <Heading fontSize="2rem" marginBottom="1rem">
           Online Resume
         </Heading>
-        <BaseButton>Download PDF Version</BaseButton>
+        <BaseButton
+          href={`https://drive.google.com/uc?export=download&id=${fileId}`}
+        >
+          Download PDF Version
+        </BaseButton>
       </Flex>
     </HeaderWrapper>
   );

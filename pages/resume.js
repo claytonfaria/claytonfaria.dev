@@ -3,9 +3,11 @@ import { Flex } from '@chakra-ui/core';
 import ResumeHeader from '../components/resume/header';
 
 export default function Resume() {
+  const fileId = '1fx4ETI_Syhlav57HwstM-OZSrjNN1koZ';
+
   return (
     <>
-      <ResumeHeader />
+      <ResumeHeader fileId={fileId} />
 
       <Flex
         paddingX="15px"
@@ -19,7 +21,7 @@ export default function Resume() {
       >
         <iframe
           title="resume"
-          src="https://drive.google.com/file/d/0B-kFW_-a3s5NcjJKOVY3OWRyd1k/preview"
+          src={`https://drive.google.com/file/d/${fileId}/preview`}
           width="100%"
           height="100%"
         />
