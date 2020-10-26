@@ -33,7 +33,7 @@ export default function AboutHeader() {
             Web Developer
           </Text>
           <Text marginBottom="1.5rem">
-            I am a brazilian 🇧🇷 <strong>web developer</strong> living in awesome
+            I am a Brazilian 🇧🇷 <strong>web developer</strong> living in awesome
             Taiwan 🇹🇼, the Heart of Asia. I mostly code with{' '}
             <strong>JavaScript </strong>
             (React.js/Next.js & Node.js), but I also have some experience with
