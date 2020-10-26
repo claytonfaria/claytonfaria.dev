@@ -51,7 +51,14 @@ function Skill({ colorMode, src, alt }) {
       borderRadius=".5rem"
       background={colorMode === 'dark' && 'white'}
     >
-      <Image src={src} alt={alt} maxWidth="8rem" height="4rem" margin="1rem" />
+      <Image
+        src={src}
+        alt={alt}
+        maxWidth="8rem"
+        height="4rem"
+        margin="1rem"
+        htmlHeight="96"
+      />
     </Box>
   );
 }

@@ -19,6 +19,8 @@ export default function Profile() {
           src="/images/profile-big.webp"
           fallbackSrc="/images/profile-big.jpg"
           marginBottom="1rem"
+          htmlHeight="160px"
+          htmlWidth="160px"
           alt="profile"
         />
       </Box>
