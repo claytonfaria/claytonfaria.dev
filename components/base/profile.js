@@ -1,4 +1,5 @@
-import { Box, Flex, HStack, Image, Text } from '@chakra-ui/core';
+import { Box, Flex, HStack, Text } from '@chakra-ui/core';
+import Image from 'next/image';
 
 import SocialIcons from './socialIcons';
 
@@ -12,16 +13,13 @@ export default function Profile() {
       textAlign="center"
       fontSize="sm"
     >
-      <Box>
+      <Box marginBottom="1rem">
         <Image
-          borderRadius="full"
-          boxSize="160px"
           src="/images/profile-big.webp"
-          fallbackSrc="/images/profile-big.jpg"
-          marginBottom="1rem"
-          htmlHeight="160px"
-          htmlWidth="160px"
           alt="profile"
+          width={160}
+          height={160}
+          className="profileImg"
         />
       </Box>
       <Text marginBottom="1rem">
@@ -35,6 +33,13 @@ export default function Profile() {
         <SocialIcons type="linkedin" />
       </HStack>
       {/* //Social icons */}
+      <style global jsx>
+        {`
+          .profileImg {
+            border-radius: 50%;
+          }
+        `}
+      </style>
     </Flex>
   );
 }

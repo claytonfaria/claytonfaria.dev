@@ -1,18 +1,19 @@
-import { Heading, Text, Flex, Image, useColorMode, Box } from '@chakra-ui/core';
+import { Heading, Text, Flex, useColorMode, Box } from '@chakra-ui/core';
+import Image from 'next/image';
 
 export default function TechSkills() {
   const { colorMode } = useColorMode();
 
   const techSkills = [
-    'javascript',
-    'css',
-    'html',
-    'react',
-    'nextjs',
-    'node',
-    'express',
-    'python',
-    'pandas',
+    { skill: 'javascript', width: '64' },
+    { skill: 'css', width: '64' },
+    { skill: 'html', width: '64' },
+    { skill: 'react', width: '91' },
+    { skill: 'nextjs', width: '107' },
+    { skill: 'node', width: '104' },
+    { skill: 'express', width: '128' },
+    { skill: 'python', width: '64' },
+    { skill: 'pandas', width: '128' },
   ];
   return (
     <>
@@ -31,11 +32,12 @@ export default function TechSkills() {
       </Text>
 
       <Flex justifyContent="center" flexWrap="wrap">
-        {techSkills.map((skill, index) => (
+        {techSkills.map((icon, index) => (
           <Skill
             colorMode={colorMode}
-            src={`/images/skills/${skill.toLowerCase()}.svg`}
-            alt={skill}
+            src={`/images/skills/${icon.skill.toLowerCase()}.svg`}
+            alt={icon.skill}
+            width={icon.width}
             key={index}
           />
         ))}
@@ -44,24 +46,15 @@ export default function TechSkills() {
   );
 }
 
-function Skill({ colorMode, src, alt }) {
+function Skill({ colorMode, src, alt, width }) {
   return (
     <Box
       margin="0.5rem"
       borderRadius=".5rem"
+      padding="0.5rem"
       background={colorMode === 'dark' && 'white'}
     >
-      <Image
-        display="block"
-        src={src}
-        alt={alt}
-        maxWidth="8rem"
-        minWidth="4rem"
-        height="4rem"
-        margin="0.5rem"
-        htmlHeight="96"
-        // htmlWidth="96"
-      />
+      <Image display="block" src={src} alt={alt} height="64px" width={width} />
     </Box>
   );
 }

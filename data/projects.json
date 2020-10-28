@@ -5,8 +5,7 @@
       "title": "MarketNews",
       "description": "A responsive website that provides news, updated quotation and advanced charting tools",
       "tags": ["Next.js", "React", "Bootstrap"],
-      "imgUrl": "/images/projects/marketnews.webp",
-      "fallbackImgUrl": "/images/projects/marketnews.png",
+      "imgUrl": "/images/projects/marketnews.jpg",
       "liveUrl": "https://marketnews-next.vercel.app/",
       "repoUrl": "https://github.com/claytonfaria/market-news-nextJS",
       "featured": true
@@ -16,8 +15,7 @@
       "title": "My Personal Website",
       "description": "My personal/portfolio website, this one you are browsing, created using Next.js and Chakra UI",
       "tags": ["Next.js", "React", "Chakra-ui"],
-      "imgUrl": "/images/projects/portfolio.webp",
-      "fallbackImgUrl": "/images/projects/portfolio.png",
+      "imgUrl": "/images/projects/portfolio.jpg",
       "liveUrl": "/",
       "repoUrl": "https://github.com/claytonfaria/claytonfaria.dev",
       "featured": true
@@ -28,7 +26,6 @@
       "description": "Responsive React website that uses an API to display Covid-19 virus worldwide situation",
       "tags": ["CRA", "React", "Material UI"],
       "imgUrl": "/images/projects/covid19.webp",
-      "fallbackImgUrl": "/images/projects/covid19.png",
       "liveUrl": "https://claytonfaria.github.io/COVID19/",
       "repoUrl": "https://github.com/claytonfaria/COVID19/tree/master",
       "featured": false

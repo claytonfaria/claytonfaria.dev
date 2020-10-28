@@ -3,23 +3,15 @@ import {
   ButtonGroup,
   Flex,
   Heading,
-  Image,
   Text,
   useColorMode,
 } from '@chakra-ui/core';
+import Image from 'next/image';
 
 import { BaseButton } from '../base';
 
 export default function Card({ data }) {
-  const {
-    title,
-    description,
-    tags,
-    imgUrl,
-    fallbackImgUrl,
-    liveUrl,
-    repoUrl,
-  } = data;
+  const { title, description, tags, imgUrl, liveUrl, repoUrl } = data;
 
   const { colorMode } = useColorMode();
   return (
@@ -32,14 +24,8 @@ export default function Card({ data }) {
       boxShadow="lg"
       marginBottom="2rem"
     >
-      <Box flex="1">
-        <Image
-          width="100%"
-          height="auto"
-          src={imgUrl}
-          fallbackSrc={fallbackImgUrl}
-          alt="project image"
-        />
+      <Box flex="1" maxWidth={{ base: '100%', xl: '33%' }}>
+        <Image width={800} height={600} src={imgUrl} alt="project image" />
       </Box>
       <Flex direction="column" flex="2" padding="1rem">
         <Heading size="lg" marginBottom="1rem">
