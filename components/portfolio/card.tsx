@@ -10,8 +10,24 @@ import Image from 'next/image';
 
 import { BaseButton } from '../base';
 
-export default function Card({ data }) {
-  const { title, description, tags, imgUrl, liveUrl, repoUrl } = data;
+type Props = {
+  project: {
+    id: number,
+    title: string,
+    description: string,
+    tags: Array<string>,
+    imgUrl: string,
+    liveUrl: string,
+    repoUrl: string,
+    featured: boolean
+  }
+}
+
+
+
+export default function Card({ project }:Props) {
+  if (!project) return null
+  const { title, description, tags, imgUrl, liveUrl, repoUrl } = project;
 
   const { colorMode } = useColorMode();
   return (

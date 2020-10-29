@@ -14,9 +14,9 @@
       "id": 2,
       "title": "My Personal Website",
       "description": "My personal/portfolio website, this one you are browsing, created using Next.js and Chakra UI",
-      "tags": ["Next.js", "React", "Chakra-ui"],
+      "tags": ["Next.js", "React", "TypeScript", "Chakra-ui"],
       "imgUrl": "/images/projects/portfolio.jpg",
-      "liveUrl": "/",
+      "liveUrl": "",
       "repoUrl": "https://github.com/claytonfaria/claytonfaria.dev",
       "featured": true
     },

@@ -1,10 +1,16 @@
 import { Flex, useBreakpointValue } from '@chakra-ui/core';
+import {ReactElement} from 'react'
 
 import { BottomNavigation, PageMetadata } from '../components/layout';
 import MainContainer from '../components/layout/mainContainer';
 import SideBar from '../components/layout/sideBar';
 
-export default function Layout({ children, router }) {
+type LayoutProps = {
+  children:ReactElement,
+  router:any
+}
+
+export default function Layout({ children, router }:LayoutProps) {
   const deviceType = useBreakpointValue({ base: 'mobile', lg: 'desktop' });
   return (
     <>

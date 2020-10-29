@@ -1,7 +1,12 @@
 import { Link, IconButton } from '@chakra-ui/core';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
-export default function SocialIcons({ type }) {
+
+type IconType = {
+  type:'github' | 'linkedin' | 'twitter'
+}
+
+export default function SocialIcons({ type }:IconType) {
   const url = {
     github: 'https://github.com/claytonfaria',
     linkedin: 'https://www.linkedin.com/in/claytonfaria/',

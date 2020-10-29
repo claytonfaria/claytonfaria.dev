@@ -2,7 +2,20 @@ import { Heading } from '@chakra-ui/core';
 
 import Card from '../portfolio/card';
 
-export default function Featured({ projects }) {
+type Props = {
+  projects: [{
+    id: number,
+    title: string,
+    description: string,
+    tags: Array<string>,
+    imgUrl: string,
+    liveUrl: string,
+    repoUrl: string,
+    featured: boolean
+  }]
+}
+
+export default function Featured({ projects }:Props) {
   return (
     <>
       <Heading
@@ -18,7 +31,7 @@ export default function Featured({ projects }) {
         .filter((project) => project.featured)
         .sort((a, b) => b.id - a.id)
         .map((project) => (
-          <Card data={project} key={project.id} />
+          <Card project={project} key={project.id} />
         ))}
     </>
   );

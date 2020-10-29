@@ -10,8 +10,14 @@ import {
 import axios from 'axios';
 import { useState } from 'react';
 
+type SubmitStatus = {
+  submitted?:boolean,
+  submitting?:boolean,
+  info:{error:boolean,msg: string|null}
+}
+
 export default function ContactForm() {
-  const [status, setStatus] = useState({
+  const [status, setStatus] = useState<SubmitStatus>({
     submitted: false,
     submitting: false,
     info: { error: false, msg: null },
@@ -21,7 +27,7 @@ export default function ContactForm() {
     email: '',
     message: '',
   });
-  const handleServerResponse = (ok, msg) => {
+  const handleServerResponse = (ok: boolean, msg: string) => {
     if (ok) {
       setStatus({
         submitted: true,
@@ -39,7 +45,7 @@ export default function ContactForm() {
       });
     }
   };
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: { persist: () => void; target: { id: any; value: any; }; }) => {
     e.persist();
     setInputs((prev) => ({
       ...prev,
@@ -51,7 +57,7 @@ export default function ContactForm() {
       info: { error: false, msg: null },
     });
   };
-  const handleOnSubmit = (e) => {
+  const handleOnSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
     axios({

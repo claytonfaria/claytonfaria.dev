@@ -4,7 +4,21 @@ import Featured from '../components/about/featured';
 import AboutHeader from '../components/about/header';
 import TechSkills from '../components/about/techSkills';
 
-export default function Home({ projects }) {
+type Props = {
+  projects: [{
+    id: number,
+    title: string,
+    description: string,
+    tags: Array<string>,
+    imgUrl: string,
+    liveUrl: string,
+    repoUrl: string,
+    featured: boolean
+  }]
+}
+
+
+export default function Home({ projects }:Props) {
   return (
     <>
       <AboutHeader />

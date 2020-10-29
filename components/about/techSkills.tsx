@@ -1,4 +1,4 @@
-import { Heading, Text, Flex, useColorMode, Box } from '@chakra-ui/core';
+import { Heading, Text, Flex, useColorMode, Box, ColorMode } from '@chakra-ui/core';
 import Image from 'next/image';
 
 export default function TechSkills() {
@@ -6,6 +6,7 @@ export default function TechSkills() {
 
   const techSkills = [
     { skill: 'javascript', width: '64' },
+    { skill: 'typescript', width: '64' },
     { skill: 'css', width: '64' },
     { skill: 'html', width: '64' },
     { skill: 'react', width: '91' },
@@ -46,15 +47,23 @@ export default function TechSkills() {
   );
 }
 
-function Skill({ colorMode, src, alt, width }) {
+type Skill={
+  colorMode:ColorMode,
+  src:string,
+  alt:string,
+  width:string
+}
+
+
+function Skill({ colorMode, src, alt, width }:Skill) {
   return (
     <Box
       margin="0.5rem"
       borderRadius=".5rem"
       padding="0.5rem"
-      background={colorMode === 'dark' && 'white'}
+      background={colorMode === 'dark' ? 'white':undefined}
     >
-      <Image display="block" src={src} alt={alt} height="64px" width={width} />
+      <Image src={src} alt={alt} height="64px" width={width} />
     </Box>
   );
 }

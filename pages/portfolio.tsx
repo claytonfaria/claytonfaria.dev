@@ -3,7 +3,21 @@ import { Container, Box, Heading } from '@chakra-ui/core';
 import Card from '../components/portfolio/card';
 import PortfolioHeader from '../components/portfolio/header';
 
-export default function Portfolio({ projects }) {
+type Props = {
+  projects: [{
+    id: number,
+    title: string,
+    description: string,
+    tags: Array<string>,
+    imgUrl: string,
+    liveUrl: string,
+    repoUrl: string,
+    featured: boolean
+  }]
+}
+
+
+export default function Portfolio({ projects }:Props) {
   return (
     <>
       <PortfolioHeader />
@@ -21,7 +35,7 @@ export default function Portfolio({ projects }) {
           {projects
             // .sort((a, b) => b.id - a.id)
             .map((project) => (
-              <Card data={project} key={project.id} />
+              <Card project={project} key={project.id} />
             ))}
         </Container>
       </Box>

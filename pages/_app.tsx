@@ -1,6 +1,7 @@
 import { extendTheme, ChakraProvider } from '@chakra-ui/core';
 
 import Layout from '../layouts/default';
+import { AppProps } from 'next/app'
 
 const theme = extendTheme({
   colors: {
@@ -21,7 +22,7 @@ const theme = extendTheme({
   },
 });
 
-function MyApp({ Component, pageProps, router }) {
+function MyApp({ Component, pageProps, router }:AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <Layout router={router}>
