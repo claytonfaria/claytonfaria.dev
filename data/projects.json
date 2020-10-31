@@ -36,10 +36,19 @@
       "description": "MERN simple project with user authentification and database connection",
       "tags": ["CRA", "React", "Express", "MongoDB", "Nodejs"],
       "imgUrl": "/images/projects/contactkeeper.webp",
-      "fallbackImgUrl": "/images/projects/contactkeeper.png",
       "liveUrl": "https://mern-contactkeeper.herokuapp.com/",
       "repoUrl": "https://github.com/claytonfaria/contact-list",
       "featured": false
+    },
+    {
+      "id": 5,
+      "title": "Task Management API",
+      "description": "RestAPI created using Nest.js, Express, Postgres,Swagger and deployed at Heroku",
+      "tags": ["Node.js", "Express", "Nest.js", "Postgres", "authentication"],
+      "imgUrl": "/images/projects/taskmanagement.jpg",
+      "liveUrl": "https://taskmanagement-nest.herokuapp.com/",
+      "repoUrl": "https://github.com/claytonfaria/taskmanagement-restapi-nestjs",
+      "featured": true
     }
   ]
 }

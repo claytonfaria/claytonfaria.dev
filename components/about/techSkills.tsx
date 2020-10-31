@@ -1,4 +1,4 @@
-import { Heading, Text, Flex, useColorMode, Box, ColorMode } from '@chakra-ui/core';
+import { Heading, Text, Flex, useColorMode, Box, ColorMode, Tooltip } from '@chakra-ui/core';
 import Image from 'next/image';
 
 export default function TechSkills() {
@@ -12,7 +12,9 @@ export default function TechSkills() {
     { skill: 'react', width: '91' },
     { skill: 'nextjs', width: '107' },
     { skill: 'node', width: '104' },
+    { skill: 'nestjs', width: '64' },
     { skill: 'express', width: '128' },
+    { skill: 'postgres', width: '128' },
     { skill: 'python', width: '64' },
     { skill: 'pandas', width: '128' },
   ];
@@ -57,13 +59,16 @@ type Skill={
 
 function Skill({ colorMode, src, alt, width }:Skill) {
   return (
+    <Tooltip placement="bottom" label={alt}>
+
     <Box
       margin="0.5rem"
       borderRadius=".5rem"
       padding="0.5rem"
       background={colorMode === 'dark' ? 'white':undefined}
-    >
+      >
       <Image src={src} alt={alt} height="64px" width={width} />
     </Box>
+      </Tooltip>
   );
 }
