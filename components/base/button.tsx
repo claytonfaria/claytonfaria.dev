@@ -1,7 +1,7 @@
 import { Button, Link } from '@chakra-ui/core';
 import { ReactNode } from 'react';
 
-type ButtonProps = {
+type BaseButtonProps = {
   children:ReactNode,
   href:string,
   background?:string
@@ -11,7 +11,7 @@ export default function BaseButton({
   children,
   background,
   href,
-}:ButtonProps) {
+}:BaseButtonProps) {
   return (
     <Button
       as={Link}

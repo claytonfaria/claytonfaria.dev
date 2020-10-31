@@ -3,22 +3,10 @@ import { Container, Box, Divider } from '@chakra-ui/core';
 import Featured from '../components/about/featured';
 import AboutHeader from '../components/about/header';
 import TechSkills from '../components/about/techSkills';
-
-type Props = {
-  projects: [{
-    id: number,
-    title: string,
-    description: string,
-    tags: Array<string>,
-    imgUrl: string,
-    liveUrl: string,
-    repoUrl: string,
-    featured: boolean
-  }]
-}
+import { Projects } from '../data/project.types';
 
 
-export default function Home({ projects }:Props) {
+export default function Home({ projects }:Projects) {
   return (
     <>
       <AboutHeader />

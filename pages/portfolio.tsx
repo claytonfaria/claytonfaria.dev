@@ -2,22 +2,10 @@ import { Container, Box, Heading } from '@chakra-ui/core';
 
 import Card from '../components/portfolio/card';
 import PortfolioHeader from '../components/portfolio/header';
-
-type Props = {
-  projects: [{
-    id: number,
-    title: string,
-    description: string,
-    tags: Array<string>,
-    imgUrl: string,
-    liveUrl: string,
-    repoUrl: string,
-    featured: boolean
-  }]
-}
+import { Projects } from '../data/project.types';
 
 
-export default function Portfolio({ projects }:Props) {
+export default function Portfolio({ projects }:Projects) {
   return (
     <>
       <PortfolioHeader />

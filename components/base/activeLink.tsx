@@ -5,14 +5,14 @@ import { ReactNode } from 'react';
 import { IconType } from 'react-icons';
 
 
-type LinkProps = {
+type ActiveLinkProps = {
   children:ReactNode,
   href:string,
   icon:IconType,
   flexDirection?:FlexOptions["direction"],
 }
 
-export default function ActiveLink ({ children, href, icon, flexDirection }:LinkProps){
+export default function ActiveLink ({ children, href, icon, flexDirection }:ActiveLinkProps){
   const { colorMode } = useColorMode();
   const router = useRouter();
 

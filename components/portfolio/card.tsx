@@ -7,25 +7,11 @@ import {
   useColorMode,
 } from '@chakra-ui/core';
 import Image from 'next/image';
+import { Project } from '../../data/project.types';
 
 import { BaseButton } from '../base';
 
-type Props = {
-  project: {
-    id: number,
-    title: string,
-    description: string,
-    tags: Array<string>,
-    imgUrl: string,
-    liveUrl: string,
-    repoUrl: string,
-    featured: boolean
-  }
-}
-
-
-
-export default function Card({ project }:Props) {
+export default function Card({ project }:Project) {
   if (!project) return null
   const { title, description, tags, imgUrl, liveUrl, repoUrl } = project;
 

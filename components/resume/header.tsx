@@ -3,11 +3,11 @@ import { Flex, Heading } from '@chakra-ui/core';
 import BaseButton from '../base/button';
 import HeaderWrapper from '../base/headerWrapper';
 
-type ResumeProps = {
+type ResumeHeaderProps = {
   fileId:string
 }
 
-export default function ResumeHeader({ fileId }:ResumeProps) {
+export default function ResumeHeader({ fileId }:ResumeHeaderProps) {
   return (
     <HeaderWrapper>
       <Flex

@@ -1,21 +1,9 @@
 import { Heading } from '@chakra-ui/core';
+import { Projects } from '../../data/project.types';
 
 import Card from '../portfolio/card';
 
-type Props = {
-  projects: [{
-    id: number,
-    title: string,
-    description: string,
-    tags: Array<string>,
-    imgUrl: string,
-    liveUrl: string,
-    repoUrl: string,
-    featured: boolean
-  }]
-}
-
-export default function Featured({ projects }:Props) {
+export default function Featured({ projects }:Projects) {
   return (
     <>
       <Heading

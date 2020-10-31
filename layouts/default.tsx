@@ -7,10 +7,9 @@ import SideBar from '../components/layout/sideBar';
 
 type LayoutProps = {
   children:ReactElement,
-  router:any
 }
 
-export default function Layout({ children, router }:LayoutProps) {
+export default function Layout({ children }:LayoutProps) {
   const deviceType = useBreakpointValue({ base: 'mobile', lg: 'desktop' });
   return (
     <>
@@ -18,7 +17,7 @@ export default function Layout({ children, router }:LayoutProps) {
       <Flex>
         {deviceType === 'desktop' && <SideBar />}
 
-        <MainContainer router={router}>{children}</MainContainer>
+        <MainContainer>{children}</MainContainer>
 
         {deviceType === 'mobile' && <BottomNavigation />}
       </Flex>

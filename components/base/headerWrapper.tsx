@@ -1,12 +1,12 @@
 import { Box, useColorMode } from '@chakra-ui/core';
 import { ReactNode } from 'react';
 
-type Children = {
+type HeaderWrapperChildren = {
   children:ReactNode
 }
 
 
-export default function HeaderWrapper({ children }:Children) {
+export default function HeaderWrapper({ children }:HeaderWrapperChildren) {
   const { colorMode } = useColorMode();
   return (
     <Box

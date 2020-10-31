@@ -1,16 +1,19 @@
 import { Flex, Box } from '@chakra-ui/core';
 import { motion } from 'framer-motion';
 import { cloneElement, ReactElement } from 'react';
+import {useRouter} from 'next/router'
 
 import { projects } from '../../data/projects.json';
 import { Footer } from '../base';
 
+
 type ContainerProps = {
   children:ReactElement,
-  router:any
 }
 
-export default function MainContainer({ children, router }:ContainerProps) {
+export default function MainContainer({ children }:ContainerProps) {
+
+  const router = useRouter()
 
   const pageTransitionAnimation = {
     pageAnimate: {

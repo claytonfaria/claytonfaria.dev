@@ -22,10 +22,10 @@ const theme = extendTheme({
   },
 });
 
-function MyApp({ Component, pageProps, router }:AppProps) {
+function MyApp({ Component, pageProps }:AppProps) {
   return (
     <ChakraProvider theme={theme}>
-      <Layout router={router}>
+      <Layout>
         <Component {...pageProps} />
       </Layout>
     </ChakraProvider>
