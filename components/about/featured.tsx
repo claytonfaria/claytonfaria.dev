@@ -1,9 +1,13 @@
 import { Heading } from '@chakra-ui/core';
-import { Projects } from '../../data/project.types';
+import { Project } from '../../data/project.types';
 
 import Card from '../portfolio/card';
 
-export default function Featured({ projects }:Projects) {
+type FeaturedProps = {
+  projects: Project[];
+};
+
+export default function Featured({ projects }: FeaturedProps) {
   return (
     <>
       <Heading

@@ -11,8 +11,12 @@ import { Project } from '../../data/project.types';
 
 import { BaseButton } from '../base';
 
-export default function Card({ project }:Project) {
-  if (!project) return null
+type CardProps = {
+  project: Project;
+};
+
+export default function Card({ project }: CardProps) {
+  if (!project) return null;
   const { title, description, tags, imgUrl, liveUrl, repoUrl } = project;
 
   const { colorMode } = useColorMode();
