@@ -23,7 +23,7 @@ export default function ActiveLink({
 
   return (
     <ListItem>
-      <NextLink href={href}>
+      <NextLink href={href} passHref>
         <Flex
           direction={flexDirection}
           alignItems="center"
@@ -39,19 +39,17 @@ export default function ActiveLink({
               : undefined
           }
           fontWeight={
-            router.pathname === href && flexDirection !== 'column'
-              ? 'bolder'
-              : undefined
+            router.pathname === href && !flexDirection ? 'bolder' : undefined
           }
           _hover={{
-            fontWeight: flexDirection !== 'column' ? 'bolder' : undefined,
+            fontWeight: flexDirection ? undefined : 'bolder',
             textDecoration: 'none',
           }}
         >
           <Icon
             fontSize="1.2rem"
             verticalAlign="-.125rem"
-            marginRight={flexDirection !== 'column' ? '.5rem' : undefined}
+            marginRight={flexDirection ? undefined : '.5rem'}
             as={icon}
           />
           {children}
