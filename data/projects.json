@@ -49,6 +49,23 @@
       "liveUrl": "https://taskmanagement-nest.herokuapp.com/",
       "repoUrl": "https://github.com/claytonfaria/taskmanagement-restapi-nestjs",
       "featured": true
+    },
+    {
+      "id": 6,
+      "title": "Taiwan Cars Auto Dealer",
+      "description": "Responsive website created with Next.js, Material UI, MongoDB, SWR, Formik and others",
+      "tags": [
+        "React",
+        "Next.js",
+        "MongoDB",
+        "SWR",
+        "Framer-Motion",
+        "BlurHash"
+      ],
+      "imgUrl": "/images/projects/taiwancars.jpg",
+      "liveUrl": "https://taiwancars.vercel.app",
+      "repoUrl": "https://github.com/claytonfaria/taiwan-cars-mui",
+      "featured": true
     }
   ]
 }

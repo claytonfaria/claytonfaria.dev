@@ -1,4 +1,4 @@
-import { Divider } from '@chakra-ui/core';
+import { Divider } from '@chakra-ui/react';
 
 export default function SectionDivider() {
   return (

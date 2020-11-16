@@ -5,10 +5,10 @@ import {
   Heading,
   Text,
   useColorMode,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import Image from 'next/image';
-import { Project } from '../../data/project.types';
 
+import type { Project } from '../../data/types';
 import { BaseButton } from '../base';
 
 type CardProps = {
@@ -16,10 +16,12 @@ type CardProps = {
 };
 
 export default function Card({ project }: CardProps) {
-  if (!project) return null;
+  const { colorMode } = useColorMode();
+  if (!project) {
+    return null;
+  }
   const { title, description, tags, imgUrl, liveUrl, repoUrl } = project;
 
-  const { colorMode } = useColorMode();
   return (
     <Flex
       background={colorMode === 'dark' ? 'primaryDark' : 'lightBackground'}

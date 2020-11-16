@@ -1,8 +1,8 @@
-import { Container, Box, Heading } from '@chakra-ui/core';
+import { Container, Box, Heading } from '@chakra-ui/react';
 
 import Card from '../components/portfolio/card';
 import PortfolioHeader from '../components/portfolio/header';
-import { Project } from '../data/project.types';
+import type { Project } from '../data/types';
 
 type PortfolioProps = {
   projects: Project[];

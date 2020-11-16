@@ -6,7 +6,7 @@ import {
   useBreakpointValue,
   Button,
   Link,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import NextLink from 'next/link';
 
 import { DarkModeToggle, HeaderWrapper } from '../base';
@@ -35,7 +35,7 @@ export default function AboutHeader() {
           <Text marginBottom="1.5rem">
             I am a Brazilian 🇧🇷 <strong>web developer</strong> living in awesome
             Taiwan 🇹🇼, the Heart of Asia. I mostly code with{' '}
-            <strong>JavaScript </strong>
+            <strong>JavaScript / TypeScript </strong>
             (React.js/Next.js & Node.js), but I also have some experience with
             Python and others.
           </Text>

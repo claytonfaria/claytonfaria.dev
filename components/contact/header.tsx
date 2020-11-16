@@ -5,7 +5,7 @@ import {
   HStack,
   Link,
   useColorMode,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 import { SocialIcons, HeaderWrapper } from '../base';
 

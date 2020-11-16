@@ -1,5 +1,5 @@
-import { Box, useColorMode } from '@chakra-ui/core';
-import { ReactNode } from 'react';
+import { Box, useColorMode } from '@chakra-ui/react';
+import type { ReactNode } from 'react';
 
 type HeaderWrapperProps = {
   children: ReactNode;

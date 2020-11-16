@@ -1,4 +1,4 @@
-import { useColorMode, IconButton } from '@chakra-ui/core';
+import { useColorMode, IconButton } from '@chakra-ui/react';
 import { FaMoon, FaSun } from 'react-icons/fa';
 
 export default function DarkModeToggle() {

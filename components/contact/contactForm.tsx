@@ -6,15 +6,15 @@ import {
   Button,
   Container,
   Text,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import axios from 'axios';
 import { useState } from 'react';
 
 type SubmitStatus = {
-  submitted?:boolean,
-  submitting?:boolean,
-  info:{error:boolean,msg: string|null}
-}
+  submitted?: boolean;
+  submitting?: boolean;
+  info: { error: boolean; msg: string | null };
+};
 
 export default function ContactForm() {
   const [status, setStatus] = useState<SubmitStatus>({
@@ -45,7 +45,10 @@ export default function ContactForm() {
       });
     }
   };
-  const handleOnChange = (e: { persist: () => void; target: { id: any; value: any; }; }) => {
+  const handleOnChange = (e: {
+    persist: () => void;
+    target: { id: any; value: any };
+  }) => {
     e.persist();
     setInputs((prev) => ({
       ...prev,
@@ -57,7 +60,7 @@ export default function ContactForm() {
       info: { error: false, msg: null },
     });
   };
-  const handleOnSubmit = (e: { preventDefault: () => void; }) => {
+  const handleOnSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
     axios({

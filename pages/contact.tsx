@@ -1,4 +1,4 @@
-import { Heading, Flex } from '@chakra-ui/core';
+import { Heading, Flex } from '@chakra-ui/react';
 
 import ContactForm from '../components/contact/contactForm';
 import ContactHeader from '../components/contact/header';

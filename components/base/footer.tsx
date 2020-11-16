@@ -1,4 +1,4 @@
-import { Flex, Text } from '@chakra-ui/core';
+import { Flex, Text } from '@chakra-ui/react';
 
 export default function Footer() {
   return (

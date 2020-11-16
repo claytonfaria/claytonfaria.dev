@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Text } from '@chakra-ui/core';
+import { Box, Flex, HStack, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 
 import SocialIcons from './socialIcons';

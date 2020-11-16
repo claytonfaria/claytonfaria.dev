@@ -1,6 +1,6 @@
-import { Heading } from '@chakra-ui/core';
-import { Project } from '../../data/project.types';
+import { Heading } from '@chakra-ui/react';
 
+import type { Project } from '../../data/types';
 import Card from '../portfolio/card';
 
 type FeaturedProps = {

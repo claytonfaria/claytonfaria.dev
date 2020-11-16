@@ -1,17 +1,17 @@
-import { Button, Link } from '@chakra-ui/core';
-import { ReactNode } from 'react';
+import { Button, Link } from '@chakra-ui/react';
+import type { ReactNode } from 'react';
 
 type BaseButtonProps = {
-  children:ReactNode,
-  href:string,
-  background?:string
-}
+  children: ReactNode;
+  href: string;
+  background?: string;
+};
 
 export default function BaseButton({
   children,
   background,
   href,
-}:BaseButtonProps) {
+}: BaseButtonProps) {
   return (
     <Button
       as={Link}
@@ -24,7 +24,6 @@ export default function BaseButton({
       color="white"
       _hover={{ opacity: '0.9', textDecoration: 'none' }}
       _active={{ opacity: '0.9', textDecoration: 'none' }}
-      
     >
       {children}
     </Button>

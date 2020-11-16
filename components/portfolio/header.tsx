@@ -1,4 +1,4 @@
-import { Text, Flex, Heading, Button, Link } from '@chakra-ui/core';
+import { Text, Flex, Heading, Button, Link } from '@chakra-ui/react';
 import NextLink from 'next/link';
 
 import { HeaderWrapper } from '../base';

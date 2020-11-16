@@ -1,4 +1,4 @@
-import { List, Stack } from '@chakra-ui/core';
+import { List, Stack } from '@chakra-ui/react';
 import { BsPersonFill } from 'react-icons/bs';
 import { FaLaptopCode } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';

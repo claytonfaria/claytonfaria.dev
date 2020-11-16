@@ -1,9 +1,9 @@
-import { Container, Box, Divider } from '@chakra-ui/core';
+import { Container, Box, Divider } from '@chakra-ui/react';
 
 import Featured from '../components/about/featured';
 import AboutHeader from '../components/about/header';
 import TechSkills from '../components/about/techSkills';
-import { Project } from '../data/project.types';
+import type { Project } from '../data/types';
 
 type HomeProps = {
   projects: Project[];

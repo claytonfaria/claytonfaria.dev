@@ -1,4 +1,5 @@
-import { ColorModeScript } from '@chakra-ui/core';
+/* eslint-disable @typescript-eslint/explicit-member-accessibility */
+import { ColorModeScript } from '@chakra-ui/react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 class MyDocument extends Document {
