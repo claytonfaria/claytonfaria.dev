@@ -38,18 +38,17 @@ export default function TechSkills() {
         Tech Skills
       </Heading>
       <Text marginBottom="1rem">
-        Below is a quick overview of my main technical skill sets and
-        technologies I use.
+        Below is a quick overview of my the main technologies I use.
       </Text>
 
       <Flex justifyContent="center" flexWrap="wrap">
-        {techSkills.map((icon, index) => (
+        {techSkills.map((icon) => (
           <Skill
             colorMode={colorMode}
             src={`/images/skills/${icon.skill.toLowerCase()}.svg`}
             alt={icon.skill}
             width={icon.width}
-            key={index}
+            key={icon.skill}
           />
         ))}
       </Flex>
@@ -57,14 +56,14 @@ export default function TechSkills() {
   );
 }
 
-type Skill = {
+type SkillProps = {
   colorMode: ColorMode;
   src: string;
   alt: string;
   width: string;
 };
 
-function Skill({ colorMode, src, alt, width }: Skill) {
+function Skill({ colorMode, src, alt, width }: SkillProps) {
   return (
     <Tooltip placement="bottom" label={alt}>
       <Box
