@@ -1,4 +1,5 @@
 import { extendTheme, ChakraProvider } from '@chakra-ui/react';
+import 'focus-visible/dist/focus-visible';
 import type { AppProps } from 'next/app';
 
 import Layout from '../layouts/default';
