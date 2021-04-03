@@ -1,5 +1,4 @@
-import { Container, Box, Divider } from '@chakra-ui/react';
-
+import { Box, Container, Divider } from '@chakra-ui/react';
 import Featured from '../components/about/featured';
 import AboutHeader from '../components/about/header';
 import TechSkills from '../components/about/techSkills';

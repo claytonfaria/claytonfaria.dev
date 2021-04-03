@@ -1,10 +1,9 @@
-import { Flex, Box } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 import type { ReactElement } from 'react';
 import { cloneElement } from 'react';
-
-import { projects } from '../../data/projects.json';
+import projects from '../../data/projects.json';
 import { Footer } from '../base';
 
 type ContainerProps = {
@@ -13,7 +12,6 @@ type ContainerProps = {
 
 export default function MainContainer({ children }: ContainerProps) {
   const router = useRouter();
-
   const pageTransitionAnimation = {
     pageAnimate: {
       opacity: 1,
@@ -26,7 +24,7 @@ export default function MainContainer({ children }: ContainerProps) {
     },
   };
 
-  const MotionBox = motion.custom(Box);
+  const MotionBox = motion(Box);
   return (
     <Flex
       direction="column"
@@ -43,7 +41,7 @@ export default function MainContainer({ children }: ContainerProps) {
         animate="pageAnimate"
         variants={pageTransitionAnimation}
       >
-        {cloneElement(children, { projects })}
+        {cloneElement(children, projects)}
       </MotionBox>
       <Footer />
     </Flex>

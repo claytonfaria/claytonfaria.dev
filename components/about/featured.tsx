@@ -1,12 +1,10 @@
 import { Heading } from '@chakra-ui/react';
-
 import type { Project } from '../../data/types';
 import Card from '../portfolio/card';
 
 type FeaturedProps = {
   projects: Project[];
 };
-
 export default function Featured({ projects }: FeaturedProps) {
   return (
     <>
@@ -20,7 +18,7 @@ export default function Featured({ projects }: FeaturedProps) {
         Featured Projects
       </Heading>
       {projects
-        .filter((project) => project.featured)
+        ?.filter((project) => project.featured)
         .sort((a, b) => b.id - a.id)
         .map((project) => (
           <Card project={project} key={project.id} />
