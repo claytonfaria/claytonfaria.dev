@@ -1,16 +1,15 @@
-import { HStack, useColorMode } from '@chakra-ui/react';
+import { HStack, List, useColorMode } from '@chakra-ui/react';
 import { BsPersonFill } from 'react-icons/bs';
 import { FaLaptopCode } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
 import { RiPagesLine } from 'react-icons/ri';
-
 import { ActiveLink } from '../base';
 
 export default function BottomNavigation() {
   const { colorMode } = useColorMode();
   return (
     <HStack
-      as="ul"
+      as={List}
       width="100%"
       boxShadow="0 -10px 10px rgba(0,0,0,.2)"
       left="0"
